@@ -1,0 +1,43 @@
+// questions  for practice on null safty dart 
+import 'dart:math';
+
+void main() {
+  // Question 1:
+  // What is the purpose of the ? operator in Dart null safety?
+  // It makes a variable nullable (i.e., it can hold a null value).
+  int? exampleNullable;
+  print('Question 1: exampleNullable = $exampleNullable');
+
+  // Question 2:
+  // Create a late variable named address, assign a US value to it and print it.
+  late String address;
+  address = 'US';
+  print('Question 2: Address = $address');
+
+  // Question 3:
+  // How do you declare a nullable type in Dart null safety?
+  String? name; 
+  print('Question 3: Name = $name');
+
+  // Question 4:
+  // Write a program to create an age variable and assign a null value using ?
+  int? age = null;
+  print('Question 4: Age = $age');
+
+  // Question 5:
+  // Write a function that accepts a nullable int and returns 0 if null using ??
+  int checkValue(int? value) {
+    return value ?? 0;
+  }
+  print('Question 5: checkValue(null) = ${checkValue(null)}');
+  print('Question 5: checkValue(10) = ${checkValue(10)}');
+
+  // Question 6:
+  // Write generateRandom() returning 100 or null, assign to non-nullable status using ?? 0
+  int? generateRandom() {
+    return Random().nextBool() ? 100 : null;
+  }
+
+  int status = generateRandom() ?? 0;
+  print('Question 6: Status = $status');
+}
